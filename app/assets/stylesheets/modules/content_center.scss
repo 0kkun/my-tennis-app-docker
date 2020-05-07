@@ -1,0 +1,81 @@
+.tours-table {
+  border: 1px solid black;
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: $font-family;
+    background-color: #CCCCCC;
+    text-align: center;
+    line-height: 25px;
+  }
+  &__date {
+    font-size: 14px;
+    font-family: $font-family;
+    width: 100px;
+    padding-left: 5px;
+  }
+  &__match {
+    font-size: 14px;
+    font-family: $font-family;
+    padding-left: 8px;
+  }
+  &__category {
+    font-size: 14px;
+    font-family: $font-family;
+    padding-left: 8px;
+  }
+}
+.favorite-players-tag {
+  font-size: 13px;
+  display: inline;
+  margin: 5px;
+  background-color: rgb(128, 167, 240);
+  font-family: $font-family;
+}
+.youtube-title {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: $font-family;
+  background-color: rgb(196, 211, 212);
+}
+.youtube-upload-time {
+  font-size: 13px;
+  font-family: $font-family;
+  background-color: white;
+}
+
+.content-center {
+  height: calc( 100%-20px );
+  background-color: #EEEEEE;
+  border: 1px solid;
+  border-color: gray;
+
+  .content-center-header {
+    font-size: 20px;
+    color: white;
+    background-color: #222222;
+    text-align: center;
+    font-style: italic;
+  }
+  &__tours {
+    align-items: center;
+    height: 200px;
+    width: 95%;
+    min-width: 320px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    overflow: scroll;
+  }
+  &__tour-movies {
+    height: 590px;
+    width: 95%;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: scroll;
+  }
+
+}
