@@ -1,0 +1,39 @@
+.content-start {
+  width: 100%;
+  height: calc( 100vh - 130px );
+  .subtitle-text{
+    width: 100%;
+    height: 65px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    background-color: rgba( 200, 200, 200, 0.55 );
+    margin: 200px 0 0 0; //上右下左
+  }
+  .discription{
+    font-size: 17px;
+    color: white;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .content-start__register-btn {
+    width: 120px;
+    height: 40px;
+    font-size: 25px;
+    color: white;
+    border-radius: 27px;
+    background-color: black;
+    text-align: center;
+    margin:0 auto;
+    cursor: pointer;
+  }
+  .start-btn-text {
+    text-decoration: none;
+    color: white;
+  }
+  .content-start__register-btn:hover {
+    background: hsla(180,50%,50%,0.7);
+  }
+}
