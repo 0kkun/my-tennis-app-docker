@@ -1,0 +1,17 @@
+.content-right
+  .content-right-header
+    ATP Rank
+  .content-right__rank-table
+    %table.table-flame{:border=>1}
+      %thead
+        %tr
+          %th.table-title Rank
+          %th.table-title Name
+          %th.table-title Points
+      %tbody
+        -@rank_elements.zip(@rank_name_elements, @point_elements).each do |rank, name, point|
+          %tr
+            %td.data-rank=rank.inner_text
+            %td.data-name=name.inner_text
+            %td.data-point=point.inner_text
+
