@@ -1,0 +1,97 @@
+
+
+.players-link {
+  font-size: 16px;
+  margin-left: 30px;
+  width: 150px;
+  color: white;
+  font-family: $font-family;
+  background-color: #38aef0;
+  border-radius: 10px;
+  text-decoration : none;
+  margin-top: 20px;
+  padding: 5px;
+  height: 32px;
+  display: block;
+  text-align: center;
+}
+td {
+  height: 30px;
+  border-bottom: 1px solid black;
+  font-family: $font-family;
+}
+table {
+    width: auto;
+    border-spacing: 0;
+    font-size:16px;
+  }
+  
+.favorite-brand{
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  margin: 20px;
+  &__title{
+    font-size: 16px;
+    color: white;
+    font-family: $font-family;
+    text-align: center;
+    background-color: lightslategrey;
+    
+  }
+  .brand-change-btn {
+    background-color: red;
+    width: 70px;
+    color: white;
+    display:  block;
+    font-size: 16px;
+    padding: 3px;
+    margin-top: 8px;
+    margin-left: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-family: $font-family;
+    border-radius: 10px;
+
+  }
+}
+
+
+.favorite-player {
+  height: 500px;
+  background-color: white;
+  margin-top: 20px;
+  margin-left: 20px;
+  &__title{
+    font-size: 16px;
+    color: white;
+    font-family: $font-family;
+    text-align: center;
+    background-color: rgb(76, 114, 151);
+  }
+  &__content-title-btn {
+    font-size: 16px;
+    color: black;
+    font-family: $font-family;
+    border: 1px solid black;
+    min-width: 50px;
+    text-align: center;
+  }
+  &__content-title {
+    font-size: 16px;
+    color: black;
+    font-family: $font-family;
+    border: 1px solid black;
+    width: 500px;
+    text-align: center;
+  }
+  .favorite-delete {
+    background-color: rgb(230, 70, 70);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 8px;
+  }
+}
