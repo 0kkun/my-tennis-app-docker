@@ -1,0 +1,61 @@
+.content-center
+  .content-center-header
+    Tour Info & Chat Space
+  .content-center__tours
+    %table.tours-table{:border=>1}
+      %thead
+        %tr
+          %th.tours-table__title 日程
+          %th.tours-table__title 大会名
+          %th.tours-table__title カテゴリ
+      %tbody
+        -@date_elements.zip(@match_elements, @category_elements).each do |date, name, category|
+          %tr
+            %td.tours-table__date=date.inner_text
+            %td.tours-table__match=name.inner_text
+            %td.tours-table__category=category.inner_text 
+
+  .content-center-header
+    Tour Movies
+  .content-center__tour-movies
+    - if @youtube_function == 1
+      -current_user.player.each do |player|
+        .favorite-players-tag
+          = player.name
+
+      - if @count == 1
+        - @youtube_data_0.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+
+      - elsif @count == 2
+        - @youtube_data_0.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+        - @youtube_data_1.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+  
+      - elsif @count == 3
+        - @youtube_data_0.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+        - @youtube_data_1.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+        - @youtube_data_2.items.each do |item|
+          - snippet = item.snippet
+          %p.youtube-title= snippet.title
+          %p.youtube-upload-time= snippet.published_at
+          %iframe#much1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "250", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
+
