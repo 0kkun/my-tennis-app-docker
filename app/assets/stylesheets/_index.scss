@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+.notice{
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  background-color: #3CCACE;
+  width: 100%;
+  text-align: center;
+  font-family: $font-family;
+}
+.alert {
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  background-color: #ed6d6d;
+  width: 100%;
+  text-align: center;
+  font-family: $font-family;
+}
+.wrapper {
+  width  : 100vw;
+  background-image: image-url("tennis-background-image.jpeg");
+  background-size: cover;
+}
+.main {
+  padding-top: 100px;
+  width  : 100%;
+  height: calc( 100% - 30px);
+}
+.favorite-main{
+  padding-top: 100px;
+  width  : 100%;
+  height: 100vh;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .header-title-text {
+    font-size: 25px;
+  }
+  .favorite-player-btn {
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+  }
+  .main {
+    display: flex;
+  }
+  .content-left {
+    width: 30%;
+    min-width: 320px;
+    margin: 10px;
+  }
+  .content-center {
+    width: 40%;
+    min-width: 400px;
+    margin: 10px;
+  }
+  .content-right {
+    width: 30%;
+    min-width: 320px;
+    margin: 10px;
+  }
+  .favorite-player {
+    width  : 600px;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  .header-title-text {
+    font-size: 25px;
+  }
+  .favorite-player-btn {
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+  }
+  .content-left {
+    width: 70%;
+    min-width: 320px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .content-center {
+    width: 70%;
+    min-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .content-right {
+    width: 70%;
+    min-width: 320px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .favorite-player {
+    width  : 600px;
+  }
+  
+}
+
+
+@media (max-width: 480px) { 
+  .header-title-text{
+    font-size: 16px;
+  }
+  .favorite-player-btn {
+    font-size: 12px;
+    border-radius: 2px;
+    margin: 2px;
+    padding: 2px;
+  }
+  .header__icons__edit {
+    width: 100px;
+  }
+  .content-left {
+    width: 90%;
+    min-width: 320px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .content-center {
+    width: 90%;
+    min-width: 320px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .content-right {
+    width: 95%;
+    margin: 0 auto;
+    min-width: 320px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .favorite-player {
+    width  : 330px;
+  }
+
+
+}
