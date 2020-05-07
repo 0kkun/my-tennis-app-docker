@@ -1,0 +1,47 @@
+.content-right {
+  background-color: #EEEEEE;
+  border: 1px solid;
+  border-color: gray;
+  height: calc( 100%-20px );
+  .content-right-header{
+    font-size: 20px;
+    color: white;
+    background-color: #222222;
+    text-align: center;
+    font-style: italic;
+  }
+
+  &__rank-table {
+    overflow: scroll;
+    height: 800px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #e0e0e0;
+    line-height: normal;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    .table-title {
+      font-size: 16px;
+      font-weight: bold;
+      font-family: $font-family;
+      background-color: #CCCCCC;
+      text-align: center;
+      line-height: 25px;
+    }
+    .data-rank {
+      text-align: center;
+      font-family: $font-family;
+      width: 60px;
+    }
+    .data-name{
+      padding-left: 5px;
+      font-family: $font-family;
+    }
+    .data-point{
+      text-align: center;
+      width: 80px;
+      font-family: $font-family;
+    }
+  }
+}
