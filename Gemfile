@@ -60,3 +60,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+gem 'pry-rails' #デバッグ用の便利機能を実装
+gem 'haml-rails' #haml使用できるようになる
+gem 'font-awesome-sass' #awesomeにあるアイコン使えるようになる
+gem 'devise' #ユーザ登録用
+gem 'active_hash'
+gem 'jquery-rails'
+gem 'mechanize' # Web Scraping
+gem 'google-api-client', '0.9.20', require: 'google/apis/youtube_v3'
