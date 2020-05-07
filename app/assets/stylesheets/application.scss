@@ -1,0 +1,18 @@
+@import "./reset";
+@import "font-awesome-sprockets";
+@import "./font-awesome";
+@import "config/configs";
+@import "modules/header";
+
+@import "modules/content_start";
+@import "./index";
+@import "modules/content_left";
+@import "modules/content_center";
+@import "modules/content_right";
+@import "modules/content_chat";
+@import "modules/footer";
+@import "modules/favorite_player_edit";
+@import "modules/players";
+@import "modules/user";
+ 
+
