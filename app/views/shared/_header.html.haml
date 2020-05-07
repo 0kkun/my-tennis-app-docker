@@ -1,0 +1,20 @@
+.header
+  .header__title
+    = icon('fas', 'running')
+    = link_to "Tennis App", root_path, class: "header-title-text"
+
+  %ul.header__icons
+    - unless user_signed_in?
+      %li.header__icons__sign-in
+        = link_to new_user_registration_path, class: "sign-in-btn" do
+          = icon('fas', 'sign-in-alt') #サインイン
+    - if user_signed_in?
+      %li.header__icons__sign-out
+        = link_to destroy_user_session_path, method: :delete, class: "sign-out-btn" do
+          = icon('fas', 'sign-out-alt') #サインアウト
+      %li.header__icons__config
+        = link_to edit_user_registration_path, class: "config-btn" do
+          = icon('fa', 'cog') #アカウント編集
+
+      %li.header__icons__edit
+        = link_to "Bookmark Player", user_path(current_user), class: "favorite-player-btn"
