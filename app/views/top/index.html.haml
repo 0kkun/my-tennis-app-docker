@@ -1,0 +1,19 @@
+.notice
+  - if flash[:notice]
+    %p= flash[:notice]
+    
+.alert
+  - if flash[:alert]
+    %p= flash[:alert]
+
+.wrapper
+  = render "shared/header"
+  .main
+    - if user_signed_in?
+      = render "shared/content_left"
+      = render "shared/content_center"
+      = render "shared/content_right"
+    - unless user_signed_in?
+      = render "shared/content_start"
+      
+  = render "shared/footer"
