@@ -1,0 +1,56 @@
+.content-left {
+  height: calc( 100%-20px );
+  background-color: #EEEEEE;
+  border: 1px solid;
+  border-color: gray;
+
+  .content-left-header {
+    font-size: 20px;
+    color: white;
+    background-color: #222222;
+    text-align: center;
+    font-style: italic;
+  }
+  &__news {
+    font-size: 15px;
+    font-family: $font-family;
+    align-items: center;
+    height: 200px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    list-style-type: square;
+    overflow: scroll;
+    padding: 5px;
+  }
+
+  &__items-news {
+    font-size: 15px;
+    align-items: center;
+    height: 200px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    overflow: scroll;
+    list-style-type: square;
+  }
+  .product-content {
+    font-size: 14px;
+    font-family: $font-family;
+    width: 350px;
+    padding: 5px;
+    border-bottom: 4px solid rgb(194, 193, 193);
+  }
+  &__youtube {
+    height: 350px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: scroll;
+  }
+}
