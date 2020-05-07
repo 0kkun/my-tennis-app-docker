@@ -1,0 +1,29 @@
+.content-left
+  .content-left-header
+    Tennis Info
+  .content-left__news
+    - @news_elements.each do|news|
+      - current_user.player.each do |player|
+        - if news.inner_text.include?(player.name_search_1)
+          - link = "http://news.tennis365.net" + news.get_attribute('href')
+          %li
+            = link_to news.inner_text, link, class:"news-link"
+
+  .content-left-header
+    Item Info
+  .content-left__items-news
+    - @product_elements.each_with_index do|product, i|
+      - product_link = "https://www.yonex.co.jp" + product.get_attribute('href')
+      %li.product-content
+        = link_to product.inner_text, product_link
+      - break if i== 4
+
+  .content-left-header
+    Racket Review
+  .content-left__youtube
+    - if @youtube_function == 1
+      - @youtube_racket.items.each do |item|
+        - snippet = item.snippet
+        %p.youtube-title= snippet.title
+        %p.youtube-upload-time= snippet.published_at
+        %iframe#player1{allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen: "", frameborder: "0", height: "200", src: "https://www.youtube.com/embed/#{item.id.video_id}", width: "100%"}
