@@ -1,0 +1,82 @@
+
+.tag {
+  width: 100px;
+  text-align: center;
+  background-color: #0099e8;
+  color: #ffffff;
+  margin-top: 10px;
+  font-size: 15px;
+  border-radius: 1em;
+  font-family: $font-family;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  background-color: rgba( 128, 128, 128, 0.55 );
+  display: flex;
+  justify-content  : space-between;
+  padding: 0 20px 0 20px; //上右下左
+  position: fixed;
+  &__title {
+    height: 100%;
+    width: 200px;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    padding: 30px 0 0 0; //上右下左
+    .header-title-text {
+      text-decoration: none;
+      color: white;
+      
+    }
+  }
+
+  &__users-info {
+    width: 150px;
+    height: 100%;
+    background-color: white;
+  }
+
+  &__icons {
+      height: 100%;
+      font-size: 20px;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 35px 0 0 0; //上右下左
+      .sign-in-btn {
+        color           : white;
+        text-decoration : none;
+        margin-right: 10px;
+      }
+      .sign-out-btn {
+        color           : #38aef0;
+        text-decoration : none;
+        margin-right: 10px;
+      }
+      .sign-out-btn {
+        color           : white;
+        text-decoration : none;
+        margin-right: 10px;
+      }
+      .config-btn {
+        color           : white;
+        text-decoration : none;
+        margin-right: 10px;
+      }
+      .edit-btn {
+        color           : white;
+        text-decoration : none;
+        margin-right: 10px;
+      }
+      .favorite-player-btn {
+        color: white;
+        font-family: $font-family;
+        background-color: #38aef0;
+        text-decoration : none;
+
+      }
+  }
+}
