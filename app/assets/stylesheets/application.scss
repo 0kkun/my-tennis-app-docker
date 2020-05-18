@@ -3,7 +3,6 @@
 @import "./font-awesome";
 @import "config/configs";
 @import "modules/header";
-
 @import "modules/content_start";
 @import "./index";
 @import "modules/content_left";
@@ -14,5 +13,4 @@
 @import "modules/favorite_player_edit";
 @import "modules/players";
 @import "modules/user";
- 
-
+@import "bootstrap";

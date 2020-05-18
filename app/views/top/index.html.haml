@@ -1,10 +1,10 @@
-.notice
-  - if flash[:notice]
-    %p= flash[:notice]
-    
-.alert
-  - if flash[:alert]
-    %p= flash[:alert]
+- if flash[:notice]
+  .notification.bg-info.text-white.text-center
+    = flash[:notice]
+- else
+  .missing.bg-danger.text-white.text-center
+    = flash[:alert]
+
 
 .wrapper
   = render "shared/header"
