@@ -10,8 +10,15 @@ Rails.application.routes.draw do
       post "add", to: "favorites#create"
     end
   end
-  #個人ページからお気に入りを削除する
   resources :favorites, only: [:destroy]
 
+
+
+  resources :brands do
+    member do
+      post "add", to: "brand_users#create"
+    end
+  end
+  resources :brand_users, only: [:destroy]
 
 end
