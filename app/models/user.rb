@@ -8,5 +8,8 @@ class User < ApplicationRecord
 
   has_many :favorites #User:Favorite => 1:多
   has_many :player, through: :favorites
+
+  has_many :brand_users
+  has_many :brand, through: :brand_users
   
 end
