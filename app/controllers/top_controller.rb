@@ -40,7 +40,7 @@ class TopController < ApplicationController
 
   def index
     if user_signed_in?
-      # --------------大会日程のスクレイピング--------------------
+      # --------------ニュースのスクレイピング--------------------
       news_search_url = "http://news.tennis365.net/news/today/"
 
       # agentという変数にMechanizeクラスのインスタンスを代入。
@@ -93,7 +93,7 @@ class TopController < ApplicationController
         @youtube_function = 0 #### ココを1に変えるとyoutube apiの機能がONになる！
       else
         @youtube_function = 0
-        redirect_to root_path, alert: '選手が登録されていないか、1日あたりのyoutube取得件数を超えました。'
+        redirect_to root_path, alert: "選手が登録されていないか、1日あたりのyoutube取得件数を超えました"
       end
 
 
