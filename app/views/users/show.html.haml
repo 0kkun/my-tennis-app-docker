@@ -1,54 +1,56 @@
-/ 選手一覧ビュー
-
-.notice
-  - if flash[:notice]
-    %p= flash[:notice]
-
-.alert
-  - if flash[:alert]
-    %p= flash[:alert]
-
-
+- if flash[:notice]
+  .notification.bg-info.text-white.text-center
+    = flash[:notice]
+- else
+  .missing.bg-danger.text-white.text-center
+    = flash[:alert]
 
 .wrapper
   = render "shared/header"
-  .favorite-main
-    = link_to "選手一覧", players_path, class: "players-link"
-    .favorite-player
-      .favorite-player__title お気に入りの選手
-      %table
-        %thead
-          %tr
-            %th.favorite-player__content-title-btn 削除
-            %th.favorite-player__content-title 選手名(英語)
-            %th.favorite-player__content-title 選手名(日本語)
-        %tbody
-          / 削除リンクの為にindex付きのメソッドを使用
-          - @user.player.each_with_index do |player, i|
-            %tr
-              %td= link_to "削除",favorite_path(@favorites[i][:id]),class:"favorite-delete", method: :delete
-              %td= player.name
-              %td= player.name_jp
+  .container.favorite-main
+    %h1.text-center.text-white Bookmark
+    .row
+      .col-sm-6.pt-2.pb-4
+        .contents-favorite
+          .contents-head.text-center.bg-secondary.text-white.h3.font-alegreya.font-weight-bold Player
+          .input-group.container.p-3.px-5.w-70
+            %input.form-control{:placeholder => "テキスト入力欄", :type => "text"}/
+            %span.input-group-btn
+              %button.btn.btn-default.bg-dark.text-white{:type => "submit"} 検索
+          .list-box
+            %table.table.table-striped
+              %tbody
+                - @players.each do |player|
+                  %tr
+                    -if @favorites.find_by(player_id: player.id).present?
+                      %td.btn.btn-danger.pb-4.mt-2.ml-2
+                        - favorite_id = @favorites.find_by(player_id: player.id)
+                        = link_to "解除",favorite_path(favorite_id),class:"text-white pb-2", style: "text-decoration: none;", method: :delete
+                    -else
+                      %td.btn.btn-success.pb-4.mt-2.ml-2
+                        = link_to "登録", add_player_path(player.id),class:"text-white pb-2", style: "text-decoration: none;", method: :post
+                    %td.pt-4= player.name_jp
+
+      .col-sm-6.pt-2.pb-4
+        .contents-favorite
+          .contents-head.text-center.bg-secondary.text-white.h3.font-alegreya.font-weight-bold Brand
+          .input-group.container.p-3.px-5.w-70
+            %input.form-control{:placeholder => "テキスト入力欄", :type => "text"}/
+            %span.input-group-btn
+              %button.btn.btn-default.bg-dark.text-white{:type => "submit"} 検索
+          .list-box
+            %table.table.table-striped
+              %tbody
+                - @brands.each do |brand|
+                  %tr
+                    -if @brand_users.find_by(brand_id: brand.id).present?
+                      %td.btn.btn-danger.pb-4.mt-2.ml-2
+                        - brand_user_id = @brand_users.find_by(brand_id: brand.id)
+                        = link_to "解除",brand_user_path(brand_user_id),class:"text-white pb-2", style: "text-decoration: none;", method: :delete
+                    -else
+                      %td.btn.btn-success.pb-4.mt-2.ml-2
+                        = link_to "登録", add_brand_path(brand.id),class:"text-white pb-2", style: "text-decoration: none;", method: :post
+                    %td.pt-4= brand.name
 
 
   = render "shared/footer"
-
-
-
-
-  -#   .favorite-brand
-  -#     .favorite-brand__title お気に入りブランド
-  -#     .favorite-brand__list
-  -#       - @user.brand.each do |f|
-  -#         = f.name
-  -#       / brand_userモデルに対してデータを投稿。brandsコントローラーのcreateアクションを実行。
-  -#       =form_for :user do |f|
-
-  -#         =f.collection_check_boxes :brand_ids, Brand.all, :id, :name do |b|
-  -#           =b.label{ b.check_box + b.text }
-  -#           %br
-  -#         =f.submit "変更", class:"brand-change-btn"
-
-  -#         =link_to "変更", brands_path(current_user), class:"brand-change-btn", method: :PATCH
-
-  -# = render "shared/footer"
