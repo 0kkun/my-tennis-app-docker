@@ -82,34 +82,42 @@
 #   ]
 # )
 
-Brand.create!(
+# Brand.create!(
+#   [
+#     {
+#       name:  'Yonex',
+#     },
+#     {
+#       name:  'Wilson',
+#     },
+#     {
+#       name:  'Babolat',
+#     },
+#     {
+#       name:  'Prince',
+#     },
+#     {
+#       name:  'DUNLOP',
+#     },
+#     {
+#       name:  'Tecnifibre',
+#     },
+#     {
+#       name:  'Srixon',
+#     },
+#     {
+#       name:  'Bridgestone',
+#     },
+#     {
+#       name:  'HEAD',
+#     }
+#   ]
+# )
+
+BrandUser.create!(
   [
     {
-      name:  'Yonex',
-    },
-    {
-      name:  'Wilson',
-    },
-    {
-      name:  'Babolat',
-    },
-    {
-      name:  'Prince',
-    },
-    {
-      name:  'DUNLOP',
-    },
-    {
-      name:  'Tecnifibre',
-    },
-    {
-      name:  'Srixon',
-    },
-    {
-      name:  'Bridgestone',
-    },
-    {
-      name:  'HEAD',
+      user_id: 1, brand_id: 1,
     }
   ]
 )
