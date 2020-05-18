@@ -70,3 +70,4 @@ gem 'devise' #ユーザ登録用
 gem 'jquery-rails'
 gem 'mechanize' # Web Scraping
 gem 'google-api-client', '0.9.20', require: 'google/apis/youtube_v3'
+gem 'bootstrap', '~> 4.1.1'
